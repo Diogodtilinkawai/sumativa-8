@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Usuarios
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-input></ion-input>
+  <ion-item>
+    <ion-label>Nombre</ion-label>
+    <ion-input [formControl]="nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>correo </ion-label>
+    <ion-input [formControl]="correo"></ion-input>
+  </ion-item>
+  <ion-button (click)="agregar()">Agregar</ion-button>
+  <table>
+    <tr *ngFor="let item of items;let indice=index">
+      <td> {{indice+1}}
+      <td>{{item.nombre}}</td>
+      <td>
+        <ion-label>Completado</ion-label>
+        <ion-checkbox></ion-checkbox>
+      </td>
+    </tr>
+  </table>
+</ion-content>
